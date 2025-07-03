@@ -1,97 +1,451 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* ===================== TEMEL AYARLAR ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  background-color: #faf3f9;
+}
+
+/* ===================== ANA SAYFA HERO BÖLÜMÜ ===================== */
+.hero-section {
+  background-image: url('public/assets/iteration-1/home-banner.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
+.hero-content {
+  color: white;
+}
+
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  width: 700px;
+  margin-bottom: 30px;
+  padding: 30px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.hero-subtitle {
+  font-family: 'Satisfy';
+  color: #FDC913;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+
+.hero-title {
+  font-size: 48px;
+  font-weight:normal;
+  margin-bottom: 30x;
+}
+
+.hero-button {
+  background-color: #FDC913;
+  color: #292929;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 45px;
+  font-size: 18px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+
+/* ===================== ÜST MENÜ ===================== */
+.main-nav {
+  background: white;
+  padding: 20px 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #292929;
+  font-size: 14px;
+}
+
+.nav-item img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ===================== ÖZEL KARTLAR ===================== */
+.special-cards {
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cards-grid {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 20px;
 }
 
 .card {
-  padding: 2em;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  color: white;
 }
 
-.read-the-docs {
-  color: #888;
+.card-large {
+  background-image: url('public/assets/iteration-2/cta/kart-1.png');
+  width: 500px;
+  height: 500px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.card-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 480px;
+}
+
+.card-medium {
+  background-image: url('public/assets/iteration-2/cta/kart-2.png');
+  height: 240px;
+}
+
+.card-small {
+  background-image: url('public/assets/iteration-2/cta/kart-3.png');
+  height: 240px;
+}
+
+.card h2 {
+  font-family: 'Quattrocento', serif;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.card-small h3 {
+  color: #5F5F5F;
+}
+
+.card p {
+  font-family: 'Quattrocento', serif;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.red-text {
+  color: #CE2829;
+}
+
+.card-button {
+  background: white;
+  color: #CE2829;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* ===================== BAŞLIK BÖLÜMÜ ===================== */
+.section-headers {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.section-subtitle {
+  font-family: 'Satisfy', cursive;
+  color: #CE2829;
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.section-title {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #292929;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+/* ===================== YİYECEK KATEGORİLERİ ===================== */
+.food-categories {
+  padding: 30px 0;
+}
+
+.categories-grid {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 25px;
+  background: white;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #292929;
+  font-size: 14px;
+}
+
+.category-item img {
+  width: 20px;
+  height: 20px;
+}
+
+.category-item.active {
+  background: #292929;
+  color: white;
+}
+
+/* ===================== YİYECEK KARTLARI ===================== */
+.food-items {
+  padding: 30px 0 60px;
+}
+
+.food-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.food-card {
+  background: #FDFAF7;
+  border-radius: 16px;
+  width: 300px;
+  overflow: hidden;
+}
+
+.food-card img {
+  width: 100%;
+  height: 260 px;
+  object-fit: cover;
+}
+
+.food-info {
+  padding: 20px;
+}
+
+.food-info h4 {
+  color: #292929;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.food-meta {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 14px;
+}
+
+.rating {
+  color: #292929;
+  font-weight: 700;
+}
+
+.price {
+  color: #292929;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* ===================== FOOTER ===================== */
+.footer {
+  background: #1b1b1b;
+  color: #ccc;
+  padding: 50px 0 20px;
+}
+
+.footer-grid {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 50px;
+  padding: 0 20px;
+  margin-bottom: 30px;
+}
+
+.footer-main {
+  flex: 2;
+ 
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.contact-item img {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+}
+
+.hot-menu {
+  flex: 1;
+}
+
+.hot-menu h4 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.hot-menu ul {
+  list-style: none;
+}
+
+.hot-menu li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.instagram-section {
+  flex: 1;
+}
+
+.instagram-section h4 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.instagram-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 200px;
+}
+
+.instagram-grid img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* ===================== MOBİL RESPONSIVE ===================== */
+
+/* Mobil için */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 28px;
   }
-  a:hover {
-    color: #747bff;
+  
+  .hero-subtitle {
+    font-size: 20px;
   }
-  button {
-    background-color: #f9f9f9;
+  
+  .logo {
+    width: 150px;
+  }
+  
+  .cta-button {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+  
+  .nav-container {
+    gap: 15px;
+  }
+  
+  .nav-item {
+    font-size: 12px;
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  .card h2 {
+    font-size: 28px;
+  }
+  
+  .card h3 {
+    font-size: 18px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+  
+  .section-subtitle {
+    font-size: 18px;
+  }
+  
+  .categories-grid {
+    gap: 10px;
+  }
+  
+  .category-item {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+  
+  .food-card {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .container {
+    padding: 0 15px;
   }
 }
